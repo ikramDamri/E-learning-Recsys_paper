@@ -1,0 +1,69 @@
+% \setcounter{chapter}{-1}
+% \setcounter{section}{-1}
+% \hyphenpenalty 1000000000
+% for large array
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+%for \subsubsection
+\setcounter{tocdepth}{3}
+% number \subsubsection
+\setcounter{secnumdepth}{3}
+\definecolor{themecolor}{RGB}{234, 82, 82}
+
+
+%\titleformat{\chapter}[hang]{\LARGE\bfseries}{Chapter \thechapter \,\,:\,\,}{0pt}{\LARGE\bfseries}
+%\geometry{
+%  a4paper,
+%  total={170mm,257mm},
+%  left=20mm,
+%  top=20mm,
+%  bottom=3mm,
+%}
+\AtBeginDocument{\def\labelitemi{\includegraphics[width=0.5cm]{./imgs/point-right.png}}}
+% \tikzumlset{fill usecase=pagecolor}
+
+
+%\renewcommand{\umlfillcolor}{pagecolor}
+%\renewcommand{\umltextcolor}{textcolor}
+%\tikzumlset{fill system=pagecolor}
+%\tikzumlset{fill usecase=white}
+
+
+\newcommand{\bibel}[4]{
+  \textbf{#1 : } {#2}
+
+  \href{#3}{\color{themecolor}{#3}} 
+  {\small (\textit{visited on : #4})}
+
+}
+\newcommand{\bibok}[2]{
+\textbf{#1}
+\textit{#2}
+%  {#1 : } \textit{#2}
+%  {#3, }{#4}(#5)
+}
+%\newcounter{subsubsubsection}[subsubsection]
+%\renewcommand\thesubsubsubsection{\thesubsubsection.\arabic{subsubsubsection}}
+
+\newcommand{\abr}[2]{
+  \vspace{.5cm}\begin{minipage}{0.1\textwidth}
+    \textbf{#1} 
+  \end{minipage}
+  \begin{minipage}{.01\textwidth}
+    \textbf{:} 
+  \end{minipage}
+  \begin{minipage}{.85\textwidth}
+    {#2}
+  \end{minipage}
+  
+}
+
+\newcommand{\screen}[3]{
+    \begin{figure}[H]
+      \setstretch{\lineHeight}
+      \includegraphics[width=\textwidth]{./imgs/figures/#1}
+      \caption{#2}
+      \paragraph{}{#3}
+    \end{figure}
+}
+
+
